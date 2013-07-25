@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AmapPoiSearch</string>
+    <string name="action_settings">Settings</string>
+	<string name="textview_query">POI搜索关键词:</string>
+	<string name="textview_city">所在城市:</string>
+	<string name="editText_query_hint">Query</string>
+	<string name="editText_city_hint">City</string>
+	<string name="button_search">搜索</string>
+	<string name="textview_poisearchresult_tip">结果(搜索类型设置为了所有):</string>
+	<string name="prompt">高德Poi搜索</string>
+	<string name="quit_desc">确认退出？</string>
+	<string name="cancel">取消</string>
+	<string name="confirm">确定</string>
+</resources>

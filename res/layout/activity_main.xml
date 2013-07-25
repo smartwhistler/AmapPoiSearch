@@ -1,0 +1,77 @@
+<ScrollView    
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"    
+    android:layout_width="match_parent"    
+    android:layout_height="match_parent"    
+    android:scrollbars="vertical"    
+    android:fadingEdge="vertical"
+    android:background="#CBF5E4">
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:background="#CBF5E4" >
+	    
+	    <LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:baselineAligned="false"
+	    	android:weightSum="1.0">
+			<LinearLayout
+			    android:layout_height="fill_parent"
+			    android:layout_width="fill_parent"
+			    android:layout_weight="0.5"
+			    android:orientation="vertical"
+			    android:background="#E9CBF5" >
+			    <TextView
+	    		    android:layout_width="match_parent"    
+			        android:layout_height="wrap_content"    
+	    		    android:text="@string/textview_query"
+			        android:textSize="15sp">
+			    </TextView>
+				<EditText
+				    android:id="@+id/editText_Query"
+				    android:inputType="none"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:hint="@string/editText_query_hint"/>
+			</LinearLayout>
+	    	<LinearLayout
+			    android:layout_height="fill_parent"
+			    android:layout_width="fill_parent"
+			    android:layout_weight="0.5"
+		    	android:orientation="vertical"
+		    	android:background="#CBF5CB" >
+				<TextView
+	    		    android:layout_width="match_parent"    
+			        android:layout_height="wrap_content"    
+	    		    android:text="@string/textview_city"
+			        android:textSize="15sp"/>
+				<EditText
+				    android:id="@+id/editText_City"
+				    android:inputType="none"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:hint="@string/editText_city_hint"/>
+			</LinearLayout>   	
+	    </LinearLayout>
+		
+		<Button
+			android:id="@+id/button_Search"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/button_search"
+			android:focusable="true"
+			android:focusableInTouchMode="true" />
+    	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/textview_poisearchresult_tip"/>
+    	<TextView
+    	    android:id="@+id/textview_PoiSearchResult"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>    	
+	</LinearLayout>
+ </ScrollView>
