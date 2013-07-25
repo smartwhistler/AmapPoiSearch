@@ -11,6 +11,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -60,10 +61,10 @@ public class MainActivity extends Activity {
 		
 		editText_Query=(EditText)findViewById(R.id.editText_Query);
 		editText_Query.setText(QUERY_DEFAULT);
-		//editText_Query.setFocusable(false);
+		editText_Query.setOnKeyListener(onKey);
 		editText_City=(EditText)findViewById(R.id.editText_City);
 		editText_City.setText(CITY_DEFAULT);
-		//editText_City.setFocusable(false);
+		editText_City.setOnKeyListener(onKey);
 		button_PoiSearch = (Button)findViewById(R.id.button_Search);
 		button_PoiSearch.setOnClickListener(new View.OnClickListener(){
         	public void onClick(View v) {
@@ -85,7 +86,6 @@ public class MainActivity extends Activity {
 	}
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-    	//按下键盘上返回按钮
         if(keyCode == KeyEvent.KEYCODE_BACK){
             new AlertDialog.Builder(this)
                 .setTitle(R.string.prompt)
@@ -103,10 +103,21 @@ public class MainActivity extends Activity {
                 }).show();
          
             return true;
-        }else{       
+        } else{
             return super.onKeyDown(keyCode, event);
         }
     }
+    OnKeyListener onKey=new OnKeyListener() {
+    	@Override
+		public boolean onKey(View v, int keyCode, KeyEvent event) {  
+			// TODO Auto-generated method stub
+			if(keyCode == KeyEvent.KEYCODE_ENTER){
+				button_PoiSearch.performClick();
+				return true;
+			}
+			return false;
+		}
+    };
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

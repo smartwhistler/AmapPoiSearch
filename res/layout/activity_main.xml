@@ -36,6 +36,7 @@
 				    android:inputType="none"
 				    android:layout_width="match_parent"
 				    android:layout_height="wrap_content"
+				    android:singleLine="true"
 				    android:hint="@string/editText_query_hint"/>
 			</LinearLayout>
 	    	<LinearLayout
@@ -54,6 +55,7 @@
 				    android:inputType="none"
 				    android:layout_width="match_parent"
 				    android:layout_height="wrap_content"
+				    android:singleLine="true"
 				    android:hint="@string/editText_city_hint"/>
 			</LinearLayout>   	
 	    </LinearLayout>
